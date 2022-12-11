@@ -1,6 +1,6 @@
 name: "Concord232"
 description: "Concord4 RS232 Integration"
-version: "1.0.21"
+version: "1.0.22"
 slug: "concord232"
 arch:
   - aarch64
@@ -12,6 +12,7 @@ startup: before
 ports:
   5007/tcp: 5007
 devices:
+  - /dev/ttyUSB0
   - /dev/ttyUSB1
 privileged:
   - NET_ADMIN
