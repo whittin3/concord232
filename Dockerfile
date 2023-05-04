@@ -6,6 +6,10 @@ RUN \
   apk add --no-cache \
     python3
 
+RUN \
+  apk add --no-cache \
+    py3-pip
+
 # Install add-on
 ADD concord232 /concord232
 RUN pip3 install concord232
