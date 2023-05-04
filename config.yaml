@@ -1,6 +1,6 @@
 name: "Concord232"
 description: "Concord4 RS232 Integration"
-version: "1.0.24"
+version: "1.0.25"
 slug: "concord232"
 arch:
   - aarch64
@@ -18,6 +18,6 @@ privileged:
   - NET_ADMIN
   - SYS_RESOURCE
 options:
-  serial_port: null
+  device: /dev/ttyUSB0
 schemas:
-  serial_port: device(subsystem=tty)
+  device: str
