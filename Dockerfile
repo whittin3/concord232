@@ -22,4 +22,4 @@ RUN chmod a+x /start.sh
 EXPOSE 5007
 
 # Entrypoint
-CMD /start.sh
+CMD [ "/start.sh" ]
