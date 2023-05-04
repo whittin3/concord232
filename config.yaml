@@ -1,6 +1,6 @@
 name: "Concord232"
 description: "Concord4 RS232 Integration"
-version: "1.0.26"
+version: "1.0.27"
 slug: "concord232"
 arch:
   - aarch64
@@ -19,5 +19,5 @@ privileged:
   - SYS_RESOURCE
 options:
   device: /dev/ttyUSB0
-schemas:
+schema:
   device: str
