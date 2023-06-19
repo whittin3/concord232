@@ -1,6 +1,6 @@
 name: "Concord232"
 description: "Concord4 RS232 Integration"
-version: "1.0.31"
+version: "1.0.32"
 init: false
 slug: "concord232"
 arch:
@@ -9,7 +9,7 @@ arch:
   - armhf
   - armv7
   - i386
-startup: before
+startup: application
 ports:
   5007/tcp: 5007
 devices:
