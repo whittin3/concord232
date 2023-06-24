@@ -125,6 +125,9 @@ FAULTED = 'Faulted'
 ALARM   = 'Alarm'
 TROUBLE = 'Trouble'
 BYPASSED = 'Bypassed'
+ALARM_BYPASSED = 'Alarm_Bypassed'
+ALARM_BYPASSED_TRIPPED = 'Alarm_Bypassed_Tripped'
+ALARM_TRIPPED = 'Alarm_Tripped'
 
 ZONE_STATES = {
     0: NORMAL,
@@ -133,6 +136,8 @@ ZONE_STATES = {
     4: ALARM,
     8: TROUBLE,
     10: BYPASSED,
+    20: ALARM_BYPASSED,
+    21: ALARM_BYPASSED_TRIPPED,
 }
 
 # Concord user number values only.

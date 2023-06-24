@@ -52,3 +52,10 @@ class Client(object):
             return '1.0'
         else:
             return r.json()['version']
+
+    def sound_alarm(self, option = None):
+        r = self._session.get(
+            self._url + '/command',
+            params={'cmd': 'alarm',
+                    'option': option})
+        return r.status_code == 200
