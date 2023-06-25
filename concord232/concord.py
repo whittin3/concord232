@@ -622,5 +622,7 @@ class AlarmPanelInterface(object):
             self.send_keypress([0x4d])
         elif option == 'fire':
             self.send_keypress([0x4e])
+        else
+            self.send_keypress([0x4c])
 
 
