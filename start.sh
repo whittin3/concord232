@@ -3,7 +3,7 @@
 CONFIG_PATH=/data/options.json
 DEVICE_ARG="$(bashio::config 'device')"
 DEBUG_ARG="$(bashio::config 'debug')"
-OPTIONAL_ARG_ARRAY=()
+declare -a OPTIONAL_ARG_ARRAY=()
 if $DEBUG_ARG; then
   OPTIONAL_ARG_ARRAY+=('--debug');
 fi
