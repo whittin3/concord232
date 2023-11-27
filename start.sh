@@ -10,4 +10,4 @@ if $DEBUG_ARG; then
   ARG_ARRAY+=('--debug');
 fi
 
-concord232_server "${ARGS[@]}"
+concord232_server "${ARG_ARRAY[@]}"
