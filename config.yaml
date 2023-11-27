@@ -1,6 +1,6 @@
 name: "Concord232"
 description: "Concord4 RS232 Integration"
-version: "1.1.10"
+version: "1.1.11"
 init: false
 slug: "concord232"
 arch:

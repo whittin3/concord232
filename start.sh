@@ -9,5 +9,7 @@ ARG_ARRAY+=("$DEVICE_ARG");
 if $DEBUG_ARG; then
   ARG_ARRAY+=('--debug');
 fi
-ARGS=$(IFS=" "; echo "${ARG_ARRAY[*]}")
+
+ARGS=$(printf " %s" "${ARG_ARRAY[@]}")
+ARGS=${ARGS:1}
 concord232_server "$ARGS"
