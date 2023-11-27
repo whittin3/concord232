@@ -3,9 +3,11 @@
 CONFIG_PATH=/data/options.json
 DEVICE_ARG="$(bashio::config 'device')"
 DEBUG_ARG="$(bashio::config 'debug')"
-declare -a OPTIONAL_ARG_ARRAY=()
+declare -a ARG_ARRAY=()
+ARG_ARRAY+=('--serial');
+ARG_ARRAY+=("$DEVICE_ARG");
 if $DEBUG_ARG; then
-  OPTIONAL_ARG_ARRAY+=('--debug');
+  ARG_ARRAY+=('--debug');
 fi
-OPTIONAL_ARGS=$(IFS=" "; echo "${OPTIONAL_ARG_ARRAY[*]}")
-concord232_server --serial "$DEVICE_ARG" "$OPTIONAL_ARGS"
+ARGS=$(IFS=" "; echo "${ARG_ARRAY[*]}")
+concord232_server "$ARGS"

@@ -74,4 +74,4 @@ def main():
     t.daemon = True
     t.start()
     
-    api.app.run(debug=False, host=args.listen, port=args.port, threaded=True)
+    api.app.run(debug=True, host=args.listen, port=args.port, threaded=True)
