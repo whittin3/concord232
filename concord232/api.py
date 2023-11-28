@@ -97,8 +97,11 @@ def command():
     elif args.get('cmd') == 'keys':
         CONTROLLER.send_keys(args.get('keys'),args.get('group'))
     elif args.get('cmd') == 'alarm':
-        CONTROLLER.soundalarm(args.get('option'))
-    return flask.Response()
+        res = CONTROLLER.soundalarm(args.get('option'))
+        LOG.info(res)
+    else:
+        return flask.Response('Command not supported', status=422)
+    return flask.Response('Command executed!', status=200)
 
 @app.route('/version')
 def get_version():
