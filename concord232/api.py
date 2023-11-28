@@ -97,8 +97,7 @@ def command():
     elif args.get('cmd') == 'keys':
         CONTROLLER.send_keys(args.get('keys'),args.get('group'))
     elif args.get('cmd') == 'alarm':
-        option = args.get('option', {})
-        CONTROLLER.soundalarm(option)
+        CONTROLLER.soundalarm(args.get('option'))
     return flask.Response()
 
 @app.route('/version')
