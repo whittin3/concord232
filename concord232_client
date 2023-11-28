@@ -104,8 +104,8 @@ def do_events(clnt, args):
 def do_version(clnt, args):
     print(clnt.get_version())
 
-def do_soundalarm(clnt, args):
-    print(clnt.soundalarm(args.command))
+def do_soundalarm(clnt, option):
+    print(clnt.soundalarm(option))
 
 
 def main():
